@@ -1,23 +1,21 @@
 
 @font-face{
 font-family: "TT Lakes";
-    src: url("../fonts/TTLakes-Regular.ttf") format('truetype');
+    src: url("../fonts/TTLakes-Regular.woff") format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face{
     font-family: 'TT Lakes Bold';
-    src: url("../fonts/TTLakes-Bold.ttf") format('truetype');
+    src: url("../fonts/TTLakes-Bold.woff") format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 body {
     font-family: "TT Lakes" , "Tahoma", sans-serif;
     background-color: #F8F8F8;
-    margin: 0;
-    padding: 0;
-    width: 320px;
+
 }
 a:link {
     text-decoration: none;
@@ -27,10 +25,6 @@ a:visited {
     text-decoration: none;
     color:inherit;
 }
-
-
-
-
 .header {
     padding-top: 4px;
     display: flex;
@@ -39,6 +33,8 @@ a:visited {
     align-items: center;
     height: 88px;
     border-bottom: 1px solid #D9FFF5;
+    min-width: 320px;
+    box-sizing: border-box;
 }
 
 
@@ -74,19 +70,13 @@ a:visited {
 
 .main__slider li {
     margin-right: 5px;
-
 }
 .slider__link {
     padding: 8px 10px 8px 16px;
     border: 2px solid #F8F8F8;
     border-radius: 6px;
 }
-.slider__link--highlighted {
-    padding: 8px 10px 8px 16px;
-    border: 2px solid #B8FFEC;
-    border-radius: 6px;
-    background-color: #FFFFFF;
-}
+
 .slider__link:hover, .slider__link:active, .slider__link:focus{
     border: 2px solid #B8FFEC;
     border-radius: 6px;
@@ -112,17 +102,136 @@ a:visited {
 }
 
 
-@media (min-width: 320px) {
-    /* Стили для устройств с шириной viewport, находящейся в диапазоне 320px - 768px */
+.header__divider1 {
+    display: none;
+}
+.header__button-call {
+    display: none;
+}
+.header__button-chat {
+    display: none;
+}
+.header__button-profile {
+    display: none;
 }
 
+@media screen and (min-device-width: 450px) and (max-device-width: 549px) {
 
-@media (min-width: 768px) {
-    /* Стили для устройств с шириной viewport, находящейся в диапазоне 992px - 1199px */
+    .header {
+        height: 88px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .header__button-repair {
+        margin-right: 16px;
+    }
+    .header__button-search {
+        margin-right: 24px;
+    }
+    .header__divider {
+        margin-right: 20px;
+    }
+    .header__burger {
+        margin-left: 24px;
+    }
+    .header__divider1 {
+        display: block;
+        margin-left: 20px;
+    }
+    .header__logo {
+        margin-left: 20px;
+        margin-right: auto;
+    }
+
+}
+@media screen and (min-device-width: 550px) and (max-device-width: 768px) {
+    .header {
+        height: 88px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .header__button-repair {
+        margin-right: 16px;
+    }
+    .header__button-search {
+        margin-right: 24px;
+    }
+    .header__divider {
+        margin-right: 20px;
+    }
+    .header__burger {
+        margin-left: 24px;
+    }
+    .header__divider1 {
+        display: inline-block;
+        margin-left: 20px;
+    }
+    .header__logo {
+        margin-left: 20px;
+        margin-right: auto;
+    }
+
+    .header__button-profile {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .header__button-chat {
+        display: block;
+        margin-right: 16px;
+    }
+    .header__button-call {
+        display: block;
+        margin-right: 16px;
+        margin-left: auto;
+    }
+
 }
 
-
-@media (min-width: 1120px) {
+@media screen and (min-device-width: 769px) and (max-device-width: 1439px) {
     /* Стили для устройств с шириной viewport >1120px */
+.header {
+    height: 88px;
+    justify-content: flex-start;
+    align-items: center;
 }
+.header__button-repair {
+    margin-right: 16px;
+}
+.header__button-search {
+    margin-right: 24px;
+}
+.header__divider {
+    margin-right: 20px;
+}
+.header__burger {
+    margin-left: 24px;
+}
+.header__divider1 {
+    display: inline-block;
+    margin-left: 20px;
+}
+.header__logo {
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+.header__button-profile {
+    display: block;
+    margin-right: 20px;
+}
+
+.header__button-chat {
+    display: block;
+    margin-right: 16px;
+}
+.header__button-call {
+    display: block;
+    margin-right: 16px;
+    margin-left: auto;
+}
+
+}
+
+
 
