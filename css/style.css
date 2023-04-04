@@ -13,7 +13,7 @@ font-family: "TT Lakes";
     font-style: normal;
 }
 body {
-    font-family: "TT Lakes";
+    font-family: "TT Lakes" , "Tahoma", sans-serif;
     background-color: #F8F8F8;
     margin: 0;
     padding: 0;
@@ -43,7 +43,7 @@ a:visited {
 
 
 .main__title {
-    font-family: "TT Lakes Bold";
+    font-family: "TT Lakes Bold", "Tahoma", sans-serif;
     font-size: 28px;
     font-weight: 700;
     margin: 24px 16px;
