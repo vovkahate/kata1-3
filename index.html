@@ -2,52 +2,84 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/_normalize.css">
-    <meta name="viewport" content="width=device-width">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Проект 1.3</title>
 </head>
 <body>
-
-        <div class="header">
-            <div class="header__burger"><a href="#"><img src="img/burger.svg" alt="Главное меню"></a></div>
-            <div class="header__divider1"><img src="img/divider.svg" alt=""></div>
-            <div class="header__logo"><a href="#"><img src="img/Group.svg" alt="Логотип"></a></div>
-            <div class="header__button-call"><a href="#"><img src="img/call.svg" alt="Позвонить"></a></div>
-            <div class="header__button-chat"><a href="#"><img src="img/chat.svg" alt="Написать"></a></div>
-            <div class="header__button-profile"><a href="#"><img src="img/profile.svg" alt="Профиль"></a></div>
-            <div class="header__divider"><img src="img/divider.svg" alt=""></div>
-            <div class="header__button-repair"><a href="#"><img src="img/repair.svg" alt="Починить"></a></div>
-            <div class="header__button-search"><a href="#"><img src="img/checkstatus.svg" alt="Найти"></a></div>
-
+<div class="wrapper">
+    <header class="header">
+        <div class="header__burger">
+            <a href="#"><img src="img/burger.svg"></a>
+        </div>
+        <div class="header__divider_1">
+            <a href="#"><img src="img/divider.svg"></a>
+        </div>
+        <div class="header__logo">
+            <a href="#"><img src="img/Group.svg"></a>
         </div>
 
-        <div class="main">
-            <div class="main__title-container">
-                <div class="highlight"></div>
-                <h1 class="main__title">Услуги и сервисы</h1>
-            </div>
+        <div class="header__button-call"><a href="#"><img src="img/call.svg" alt="Позвонить"></a></div>
+        <div class="header__button-chat"><a href="#"><img src="img/chat.svg" alt="Написать"></a></div>
+        <div class="header__button-profile"><a href="#"><img src="img/profile.svg" alt="Профиль"></a></div>
+        <div class="header__divider_2"><img src="img/divider.svg" alt=""></div>
+        <div class="header__button-repair"><a href="#"><img src="img/repair.svg" alt="Починить"></a></div>
+        <div class="header__button-search"><a href="#"><img src="img/checkstatus.svg" alt="Найти"></a></div>
 
-                <ul class="main__slider">
-                    <li><a class="slider__link" href="#" autofocus>Ремонтируемые устройства</a></li>
-                    <li><a class="slider__link" href="#">Дополнительные услуги</a></li>
-                    <li><a class="slider__link" href="#">Цены на услуги</a></li>
-                    <li><a class="slider__link" href="#">Специальные цены</a></li>
-                    <li><a class="slider__link" href="#">Отзывы</a></li>
-                </ul>
-            <div class="main-flex">
-                <div class="main__text-container">
-                    <p class="main__paragraph--min">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+    </header>
 
-                    <div class="button-next">
-                        <img src="img/expand.svg" alt="Читать далее">
-                        <a href="#">Читать далее</a>
-                    </div>
+    <main class="main__wrapper">
+        <div class="main__title-wrapper">
+            <h1 class="main__title-h1">Услуги и сервисы</h1>
+            <div class="main__title-link1">Оставить заявку</div>
+            <div class="main__title-link1-pic"><img src="img/repair.svg"></div>
+            <div class="main__title-link2">Статус ремонта</div>
+            <div class="main__title-link2-pic"><img src="img/checkstatus.svg"></div>
+
+<!--            <div class="main__title-btn2">Статус ремонта<img src="img/checkstatus.svg"></div>-->
+        </div>
+        <div class="main__slider-wrapper">  <!--и тут тоже или сразу ul? -->
+            <ul class="main__slider-list">
+                <li><a class="slider__link" href="#" autofocus>Ремонтируемые устройства</a></li>
+                <li><a class="slider__link" href="#">Дополнительные услуги</a></li>
+                <li><a class="slider__link" href="#">Цены на услуги</a></li>
+                <li><a class="slider__link" href="#">Специальные цены</a></li>
+                <li><a class="slider__link" href="#">Отзывы</a></li>
+            </ul>
+        </div>
+
+        <section class="main__text_img-container">
+
+            <article class="main__text_container">
+                <p class="main__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас
+                    вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+                <p class="main__text--hide1">Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                    партнера</p>
+                <p class="main__text--hide2">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
+                    количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                    очередь, советуют нас родным и близким.</p>
+                <div class="main__text--read_more_container">
+                    <img src="img/expand.svg">
+                    <a class="main__text-expand_btn" href="#">Читать далее</a>
                 </div>
-                <img class="main__image" src="img/Picture320.png" alt="">
-            </div>
-        </div>
+            </article>
+
+          <img class="main__img" src="img/picture360.png">
+
+<!--            <picture class="main__img">-->
+<!--                <source media="(min-width: 300px) and (max-width: 1119px)"-->
+<!--                        srcset="img/picture360.png">-->
+<!--                <source media="(min-width: 1119px)"-->
+<!--                        srcset="img/picture520.png">-->
+<!--                <img src="img/Picture320.png"-->
+<!--                     alt="content image)">-->
+<!--            </picture>-->
+
+        </section>
+    </main>
+
+</div>
 
 </body>
 </html>
