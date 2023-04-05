@@ -15,109 +15,370 @@
 
 /*обёртка для всего сайта*/
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    background-color: tomato;
-    max-width: 1050px;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 5px;
-    justify-content: stretch;
+    font-family: "TT Lakes" , "Tahoma", sans-serif;
+    background-color: #F8F8F8;
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 1120px;
+
+}
+
+.main__text_container p {
+    text-align: justify;
+}
+
+a:link {
+    text-decoration: none;
+    color:inherit;
+}
+a:visited {
+    text-decoration: none;
+    color: inherit;
 }
 
 /*обёртка для верхнего блока с розовыми кнопками*/
 .header {
     display: flex;
     height: 88px;
-    max-width: 100%;
     background-color: #FFFFFF;
-
-    justify-content: flex-start;
+    padding: 0 16px;
+    justify-content: space-between;
     align-items: center;
-    padding-left: 16px;
+    border-bottom: 1px solid #D9FFF5;
+    min-width: 320px;
+    box-sizing: border-box;
 }
+
 /*обёртка для всего содержимого без хэдера*/
 .main__wrapper {
-    max-width: 100%;
+    min-width: 320px;
+    padding-bottom: 16px;
 }
 
 /*обёртка для блока с текстом и картинкой*/
 .main__text_img-container {
     display: flex;
     flex-direction: column;
-    background-color: cadetblue;
-    padding: 2px;
-    max-width: 100%;
-}
-
-
-.header__btn_list li {
-    background-color: chartreuse;
-    margin-left: 16px;
-}
-
-/*контейнер для 5 кнопок справа от логотипа*/
-.header__btn_list{
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    margin-right: 16px;
-    margin-left: auto;
-    padding: 0;
-
 }
 
 /*слайдер со списком ссылок внутри уезжающий за экран*/
 .main__slider-list{
     display: flex;
+    color: #7E7E82;
+    font-size: 16px;
     list-style-type: none;
     white-space: nowrap;
     overflow: scroll;
-    font-family: "TT Lakes";
-    font-size: 16px;
-    margin: 0;
+    margin: 0 0 24px 16px;
     padding: 0;
 }
+.main__slider-list li {
+    padding: 12px 2px;
+}
+.slider__link {
+    padding: 8px 10px 8px 16px;
+    border: 2px solid #F8F8F8;
+    border-radius: 6px;
+}
 
-/* ----блок подсветки заднего фона для удобства, потом уберу---- */
-.header__burger, .header__logo, .header__btn_list {
+.slider__link:hover, .slider__link:active, .slider__link:focus{
+    border: 2px solid #B8FFEC;
+    border-radius: 6px;
     background-color: #FFFFFF;
-    border: 1px solid black;
+    outline: none;
 }
-
-.main__title-wrapper, .main__slider-wrapper {
-    background-color: #B8FFEC;
-}
-
-
-.main__text_container {background-color: brown}
-
-/*-----убрать все что выше------*/
-
 .main__title-h1 {
     font-family: "TT Lakes Bold", "Tahoma", sans-serif;
     font-size: 28px;
     line-height: 40px;
+    padding: 24px 16px;
 }
-
+.main__title-h1::before{
+    content: "";
+    width: 4px;
+    height: 40px;
+    background-color: #41F6D7;
+    border-radius: 5px;
+    position: absolute;
+    left: -1px;
+}
 .main__img {
     max-width: 100%;
     height: auto;
 }
-.text {
-    font-family: "TT Lakes";
+.main__text {
+    font-family: "TT Lakes", "Tahoma", sans-serif;
     font-size: 14px;
     line-height: 18px;
+    padding: 0 16px;
+    margin: 0;
+    margin-bottom: 16px;
+    color: #1B1C21;
 }
 
+.main__text--read_more_container{
+    display: flex;
+    align-items:center;
+    margin-left: 16px;
+    margin-bottom: 10px;
+}
 /*начало блока настройки элементов в хэдере, скрываем лишнее на моб версии*/
 .header__divider_1,
 .header__button-call,
 .header__button-chat,
-.header__button-profile {
+.header__button-profile,
+.main__text--hide1,
+.main__text--hide2,
+.main__title-link1,
+.main__title-link1-pic,
+.main__title-link2,
+.main__title-link2-pic{
     display: none;
 }
 
-.header__logo {
-    margin-left: 16px;
+
+.main__title-h1 {
+    margin: 0;
+}
+
+@media screen and (min-device-width: 550px) and (max-device-width: 650px) {
+
+    .header {
+
+        justify-content: flex-start;
+        padding: 0 24px;
+
+    }
+    .header__logo {
+        margin-left: 24px;
+    }
+    .header__divider_2 {
+        margin-left: 20px;
+    }
+    .header__button-repair {
+        margin-left: 20px;
+    }
+    .header__button-search {
+        margin-left: 16px;
+    }
+    .header__divider_1,
+    .header__button-call,
+    .header__button-chat,
+    .header__button-profile
+    {
+        display: block;
+    }
+    .header__button-profile {
+        margin-left: 16px;
+    }
+    .header__button-chat {
+        margin-left: 16px;
+    }
+    .header__button-call{
+        margin-left: auto;
+    }
+    .header__divider_1 {
+        margin-left: 20px;
+    }
+    .main__text_img-container{
+        flex-direction: row;
+        margin-right: 24px;
+    }
+    .main__text-expand_btn {
+        font-size: 16px;
+    }
+    .main__img {
+        border-radius: 6px;
+    }
+    .main__title-h1 {
+
+        padding: 24px 24px;
+    }
+    .main__slider-list{
+        margin: 0 0 24px 24px;
+    }
+    .main__text {
+        padding: 0 24px;
+
+    }
+
+
+}
+
+@media screen and (min-device-width: 650px) and (max-device-width: 1119px) {
+    .header {
+
+        justify-content: flex-start;
+        padding: 0 24px;
+
+    }
+
+    .header__logo {
+        margin-left: 24px;
+    }
+
+    .header__divider_2 {
+        margin-left: 20px;
+    }
+
+    .header__button-repair {
+        margin-left: 20px;
+    }
+
+    .header__button-search {
+        margin-left: 16px;
+    }
+
+    .header__divider_1,
+    .header__button-call,
+    .header__button-chat,
+    .header__button-profile {
+        display: block;
+    }
+
+    .header__button-profile {
+        margin-left: 16px;
+    }
+
+    .header__button-chat {
+        margin-left: 16px;
+    }
+
+    .header__button-call {
+        margin-left: auto;
+    }
+
+    .header__divider_1 {
+        margin-left: 20px;
+    }
+
+    .main__text_img-container {
+        flex-direction: row;
+        margin-right: 24px;
+    }
+
+    .main__text_container, .main__img {
+        flex-basis: 50%;
+        line-height: 20px;
+
+    }
+
+    .main__text--hide1 {
+        display: block;
+        font-family: "TT Lakes", "Tahoma", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 0 16px;
+        margin: 0;
+        margin-bottom: 16px;
+        color: #1B1C21;
+    }
+
+    .main__img {
+        border-radius: 6px;
+    }
+    .main__title-h1 {
+        padding: 24px 24px;
+    }
+    .main__slider-list{
+        margin: 0 0 24px 24px;
+    }
+    .main__text, .main__text--hide1 {
+
+        padding: 0 24px;
+
+    }
+}
+
+@media screen and (min-device-width: 1120px) {
+    .header {
+
+        display: none;
+
+    }
+
+    .main__title-h1 {
+
+        padding: 42px 32px 0 32px;
+    }
+
+
+    .main__text_img-container {
+        flex-direction: row;
+        margin-right: 24px;
+    }
+
+    .main__text_container, .main__img {
+        flex-basis: 50%;
+        line-height: 20px;
+
+    }
+
+    .main__text--hide2 {
+        display: block;
+        font-family: "TT Lakes", "Tahoma", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 0 16px;
+        margin: 0;
+        margin-bottom: 16px;
+        color: #1B1C21;
+    }
+
+    .main__img {
+        border-radius: 6px;
+    }
+
+    .main__slider-list {
+        margin: 0 0 24px 24px;
+    }
+
+    .main__text, .main__text--hide2 {
+
+        padding: 0 24px;
+
+    }
+
+    .main__title-h1::before {
+        content: "";
+        width: 4px;
+        height: 40px;
+        background-color: #41F6D7;
+        border-radius: 5px;
+        position: absolute;
+        left: -1px;
+    }
+
+    .main__title-wrapper {
+        display: flex;
+        position: relative;
+        align-items: center;
+
+    }
+
+    .main__title-link1,
+    .main__title-link1-pic {
+        display: block;
+        padding-top: 45px;
+    }
+
+    .main__title-link2,
+    .main__title-link2-pic {
+        display: block;
+        padding-top: 45px;
+    }
+
+    .main__title-link1 {
+        margin-left: auto;
+    }
+    .main__title-link2-pic {
+        margin-right: 32px;
+        margin-left: 9px;
+    }
+    .main__title-link1-pic {
+        margin-left: 8px;
+    }
+    .main__title-link2 {
+        margin-left: 32px;
+    }
 }

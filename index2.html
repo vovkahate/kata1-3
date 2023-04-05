@@ -20,20 +20,24 @@
             <a href="#"><img src="img/Group.svg"></a>
         </div>
 
-        <ul class="header__btn_list">
-                <li class="header__button-call"><a href="#"><img src="img/call.svg" alt="Позвонить"></a></li>
-                <li class="header__button-chat"><a href="#"><img src="img/chat.svg" alt="Написать"></a></li>
-                <li class="header__button-profile"><a href="#"><img src="img/profile.svg" alt="Профиль"></a></li>
-                <li class="header__divider"><img src="img/divider.svg" alt=""></li>
-                <li class="header__button-repair"><a href="#"><img src="img/repair.svg" alt="Починить"></a></li>
-                <li class="header__button-search"><a href="#"><img src="img/checkstatus.svg" alt="Найти"></a></li>
-        </ul>
+        <div class="header__button-call"><a href="#"><img src="img/call.svg" alt="Позвонить"></a></div>
+        <div class="header__button-chat"><a href="#"><img src="img/chat.svg" alt="Написать"></a></div>
+        <div class="header__button-profile"><a href="#"><img src="img/profile.svg" alt="Профиль"></a></div>
+        <div class="header__divider_2"><img src="img/divider.svg" alt=""></div>
+        <div class="header__button-repair"><a href="#"><img src="img/repair.svg" alt="Починить"></a></div>
+        <div class="header__button-search"><a href="#"><img src="img/checkstatus.svg" alt="Найти"></a></div>
 
     </header>
 
     <main class="main__wrapper">
-        <div class="main__title-wrapper"> <!--Нужна ли эта обертка или можно сразу h1 бахать -->
+        <div class="main__title-wrapper">
             <h1 class="main__title-h1">Услуги и сервисы</h1>
+            <div class="main__title-link1">Оставить заявку</div>
+            <div class="main__title-link1-pic"><img src="img/repair.svg"></div>
+            <div class="main__title-link2">Статус ремонта</div>
+            <div class="main__title-link2-pic"><img src="img/checkstatus.svg"></div>
+
+<!--            <div class="main__title-btn2">Статус ремонта<img src="img/checkstatus.svg"></div>-->
         </div>
         <div class="main__slider-wrapper">  <!--и тут тоже или сразу ul? -->
             <ul class="main__slider-list">
@@ -48,13 +52,29 @@
         <section class="main__text_img-container">
 
             <article class="main__text_container">
-                <p class="text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-                <div class="read_more">
-                    <p>read more</p>
+                <p class="main__text">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас
+                    вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+                <p class="main__text--hide1">Мы успешно работаем с 1992 года и заслужили репутацию надежного
+                    партнера</p>
+                <p class="main__text--hide2">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое
+                    количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                    очередь, советуют нас родным и близким.</p>
+                <div class="main__text--read_more_container">
+                    <img src="img/expand.svg">
+                    <a class="main__text-expand_btn" href="#">Читать далее</a>
                 </div>
             </article>
 
-            <img class="main__img" src="img/Picture320.png">
+          <img class="main__img" src="img/picture360.png">
+
+<!--            <picture class="main__img">-->
+<!--                <source media="(min-width: 300px) and (max-width: 1119px)"-->
+<!--                        srcset="img/picture360.png">-->
+<!--                <source media="(min-width: 1119px)"-->
+<!--                        srcset="img/picture520.png">-->
+<!--                <img src="img/Picture320.png"-->
+<!--                     alt="content image)">-->
+<!--            </picture>-->
 
         </section>
     </main>
