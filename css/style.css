@@ -17,6 +17,16 @@ body {
     background-color: #F8F8F8;
 
 }
+.main {
+    margin: 0;
+    padding: 0 5px;
+}
+p.main__paragraph--min {
+    text-align: left;
+    vertical-align: top;
+    margin-top: 0 auto;
+}
+
 a:link {
     text-decoration: none;
     color:inherit;
@@ -186,6 +196,21 @@ a:visited {
         margin-left: auto;
     }
 
+    .main-flex {
+        display: flex;
+        margin-right: 5зч;
+    }
+    .main__image {
+        flex-grow: 1;
+        max-width: 100%;
+        height: auto;
+        margin-right: 25px;
+    }
+    .main__text-container {
+        flex-grow: 1;
+        margin-left: 24px;
+        padding: 0;
+    }
 }
 
 @media screen and (min-device-width: 769px) and (max-device-width: 1439px) {
@@ -195,6 +220,18 @@ a:visited {
     justify-content: flex-start;
     align-items: center;
 }
+    .main__slider {
+        padding: 16px;
+        padding-left: 24px;
+    }
+
+    .main__title {
+        font-family: "TT Lakes Bold", "Tahoma", sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        margin: 24px 24px;
+    }
+
 .header__button-repair {
     margin-right: 16px;
 }
@@ -230,7 +267,18 @@ a:visited {
     margin-right: 16px;
     margin-left: auto;
 }
-
+    .main-flex {
+        display: flex;
+    }
+    .main__image {
+        flex-grow: 1;
+        max-width: 100%;
+        height: auto;
+        margin-right: 25px;
+    }
+    .main__text-container {
+        flex-grow: 1;
+    }
 }
 
 

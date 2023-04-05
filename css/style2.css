@@ -1,0 +1,123 @@
+/*подключаем шрифты*/
+@font-face{
+    font-family: "TT Lakes";
+    src: url("../fonts/TTLakes-Regular.woff") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Bold';
+    src: url("../fonts/TTLakes-Bold.woff") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*обёртка для всего сайта*/
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: tomato;
+    max-width: 1050px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5px;
+    justify-content: stretch;
+}
+
+/*обёртка для верхнего блока с розовыми кнопками*/
+.header {
+    display: flex;
+    height: 88px;
+    max-width: 100%;
+    background-color: #FFFFFF;
+
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 16px;
+}
+/*обёртка для всего содержимого без хэдера*/
+.main__wrapper {
+    max-width: 100%;
+}
+
+/*обёртка для блока с текстом и картинкой*/
+.main__text_img-container {
+    display: flex;
+    flex-direction: column;
+    background-color: cadetblue;
+    padding: 2px;
+    max-width: 100%;
+}
+
+
+.header__btn_list li {
+    background-color: chartreuse;
+    margin-left: 16px;
+}
+
+/*контейнер для 5 кнопок справа от логотипа*/
+.header__btn_list{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-right: 16px;
+    margin-left: auto;
+    padding: 0;
+
+}
+
+/*слайдер со списком ссылок внутри уезжающий за экран*/
+.main__slider-list{
+    display: flex;
+    list-style-type: none;
+    white-space: nowrap;
+    overflow: scroll;
+    font-family: "TT Lakes";
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----блок подсветки заднего фона для удобства, потом уберу---- */
+.header__burger, .header__logo, .header__btn_list {
+    background-color: #FFFFFF;
+    border: 1px solid black;
+}
+
+.main__title-wrapper, .main__slider-wrapper {
+    background-color: #B8FFEC;
+}
+
+
+.main__text_container {background-color: brown}
+
+/*-----убрать все что выше------*/
+
+.main__title-h1 {
+    font-family: "TT Lakes Bold", "Tahoma", sans-serif;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+.main__img {
+    max-width: 100%;
+    height: auto;
+}
+.text {
+    font-family: "TT Lakes";
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/*начало блока настройки элементов в хэдере, скрываем лишнее на моб версии*/
+.header__divider_1,
+.header__button-call,
+.header__button-chat,
+.header__button-profile {
+    display: none;
+}
+
+.header__logo {
+    margin-left: 16px;
+}
