@@ -12,7 +12,9 @@
     font-weight: bold;
     font-style: normal;
 }
-
+body {
+    margin: 0;
+}
 /*обёртка для всего сайта*/
 .wrapper {
     font-family: "TT Lakes" , "Tahoma", sans-serif;
