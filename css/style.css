@@ -21,6 +21,7 @@ body {
 button {
     cursor: pointer;
     font-family: "TT Lakes", "Tahoma", sans-serif;
+    font-size: 16px;
 }
 /*обёртка для всего сайта*/
 .wrapper {
