@@ -20,6 +20,7 @@ body {
 }
 button {
     cursor: pointer;
+    font-family: "TT Lakes", "Tahoma", sans-serif;
 }
 /*обёртка для всего сайта*/
 .wrapper {
