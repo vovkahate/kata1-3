@@ -15,7 +15,6 @@
 
 body {
     font-family: "TT Lakes", "Tahoma", sans-serif;
-    margin: 0;
     background-color: #F8F8F8;
 }
 button {
@@ -190,7 +189,7 @@ button {
     background-color: #F8F8F8;
     display: flex;
     align-items: center;
-    padding-top: 0;
+    padding: 0 5px;
     margin-top: 0;
     margin-left: 16px;
     margin-bottom: 16px;
@@ -398,6 +397,7 @@ button {
     }
     .about__text, .about__text--full{
         padding: 0 24px;
+
     }
 
     .main__text--hide1,
@@ -409,6 +409,30 @@ button {
         margin: 0;
         margin-bottom: 16px;
         color: #1B1C21;
-    }
 
+    }
+    .main__list{
+        display: flex;
+        max-width: 1120px;
+        flex-wrap: wrap;
+    }
+    .list__item {
+        margin-right: 10px;
+    }
+    .list__item:nth-child(1) {
+        order: -4;
+    }
+    .list__item:nth-child(2) {
+        display: none;
+    }
+    .list__item:nth-child(3):focus-within  {
+        order: -5;
+
+    }
+    .list__item:nth-child(4) {
+        order: -3;
+    }
+    /*.about__article p {*/
+    /*    text-align: left;*/
+    /*}*/
 }
