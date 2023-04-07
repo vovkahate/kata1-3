@@ -432,7 +432,10 @@ button {
     .list__item:nth-child(4) {
         order: -3;
     }
-    /*.about__article p {*/
-    /*    text-align: left;*/
-    /*}*/
+    .about__article p {
+        margin-right: 12px;
+        text-align: left;
+        line-height: 20px;
+    }
+
 }
