@@ -1,14 +1,14 @@
 /*подключаем шрифты*/
 @font-face{
     font-family: "TT Lakes";
-    src: url("../fonts/TTLakes-Regular.woff") format('truetype');
+    src: url("../assets/TTLakes-Regular.woff") format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'TT Lakes Bold';
-    src: url("../fonts/TTLakes-Bold.woff") format('truetype');
+    src: url("../assets/TTLakes-Bold.woff") format('truetype');
     font-weight: bold;
     font-style: normal;
 }
@@ -48,8 +48,7 @@ a:visited {
     display: flex;
     height: 88px;
     background-color: #FFFFFF;
-    padding: 0 16px;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     border-bottom: 1px solid #D9FFF5;
     min-width: 320px;
@@ -75,7 +74,6 @@ a:visited {
     font-size: 16px;
     list-style-type: none;
     white-space: nowrap;
-    overflow: scroll;
     overflow-y: hidden;
     margin: 0 0 24px 16px;
     padding: 0;
@@ -104,6 +102,17 @@ a:visited {
     line-height: 40px;
     padding: 24px 16px;
     margin: 0;
+}
+
+.actions-repair::before {
+    content: "";
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
+    border-radius: 2px;
+    position: absolute;
+    right: 117px;
+    top: 6px
 }
 
 /*маркер перед заголовоком*/
@@ -142,10 +151,7 @@ a:visited {
 }
 
 /*настройка элементов в хэдере, скрываем лишнее на мобайл фёрст версии*/
-.header__divider_1,
-.header__button-call,
-.header__button-chat,
-.header__button-profile,
+
 .main__text--hide1,
 .main__text--hide2,
 .main__title-link1,
@@ -155,48 +161,60 @@ a:visited {
     display: none;
 }
 
+button {
+    padding: 0;
+    border: none;
+    background-color: #FFFFFF;
+
+}
+
+.header__burger,
+.header__logo {
+    margin-left: 16px;
+}
+
+.header__actions {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 0;
+    margin-right: 16px;
+    margin-left: auto;
+
+    position: relative;
+}
+.actions-container {
+    margin-left: 16px;
+    padding-top: 2px;
+}
+.actions-container:nth-child(-n+3) {
+    display: none;
+}
 
 @media screen and (min-device-width: 550px) and (max-device-width: 650px) {
 
     /*делаем красиво в хэдере при растягивании экрана и задаём отступы*/
-    .header {
-        justify-content: flex-start;
-        padding: 0 24px;
+   .header__burger {
+       margin-left: 24px;
+       position: relative;
+   }
 
+    .header__burger::before {
+        content: "";
+        width: 2px;
+        height: 32px;
+        background-color: #EAEAEA;
+        border-radius: 2px;
+        position: absolute;
+        right: -20px;
+        top: 6px
     }
     .header__logo {
-        margin-left: 24px;
-    }
-    .header__divider_2 {
-        margin-left: 20px;
-    }
-    .header__button-repair {
-        margin-left: 20px;
-    }
-    .header__button-search {
-        margin-left: 16px;
+        margin-left: 42px;
     }
 
-    /*достаём скрытые в моб версии элементы*/
-    .header__divider_1,
-    .header__button-call,
-    .header__button-chat,
-    .header__button-profile {
-        display: block;
-    }
-
-    .header__button-profile {
-        margin-left: 16px;
-    }
-    .header__button-chat {
-        margin-left: 16px;
-    }
-    .header__button-call{
-        margin-left: auto;
-    }
-    .header__divider_1 {
-        margin-left: 20px;
-    }
     .main__text_img-container{
         flex-direction: row;
         margin-right: 24px;
@@ -218,53 +236,56 @@ a:visited {
         padding: 0 24px;
 
     }
+    .actions-container:nth-child(-n+3) {
+        display: block;
+    }
+
+    .header__actions {
+        margin-right: 24px;
+    }
+
+    li .actions-profile {
+
+        padding-right: 26px;
+    }
 }
 
 @media screen and (min-device-width: 650px) and (max-device-width: 1119px) {
 
-    .header {
-        justify-content: flex-start;
-        padding: 0 24px;
-    }
-
-    .header__logo {
+    .header__burger {
         margin-left: 24px;
+        position: relative;
     }
 
-    .header__divider_2 {
-        margin-left: 20px;
+    .header__burger::before {
+        content: "";
+        width: 2px;
+        height: 32px;
+        background-color: #EAEAEA;
+        border-radius: 2px;
+        position: absolute;
+        right: -20px;
+        top: 6px
+    }
+    .header__logo {
+        margin-left: 42px;
     }
 
-    .header__button-repair {
-        margin-left: 20px;
-    }
-
-    .header__button-search {
-        margin-left: 16px;
-    }
-
-    .header__divider_1,
-    .header__button-call,
-    .header__button-chat,
-    .header__button-profile {
+    .actions-container:nth-child(-n+3) {
         display: block;
     }
 
-    .header__button-profile {
-        margin-left: 16px;
+    .header__actions {
+        margin-right: 24px;
     }
 
-    .header__button-chat {
-        margin-left: 16px;
+    li .actions-profile {
+
+        padding-right: 26px;
     }
 
-    .header__button-call {
-        margin-left: auto;
-    }
 
-    .header__divider_1 {
-        margin-left: 20px;
-    }
+
 
     .main__text_img-container {
         flex-direction: row;
