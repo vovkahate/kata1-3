@@ -17,6 +17,9 @@ body {
     margin: 0;
     background-color: #F8F8F8;
 }
+button {
+    cursor: pointer;
+}
 /*обёртка для всего сайта*/
 .wrapper {
     font-family: "TT Lakes" , "Tahoma", sans-serif;
@@ -27,7 +30,7 @@ body {
 }
 
 /*выравнивалка для текста в артикл*/
-.main__text_container p {
+.about__article p {
     text-align: justify;
 }
 
@@ -62,13 +65,13 @@ a:visited {
 }
 
 /*обёртка для блока с текстом и картинкой*/
-.main__text_img-container {
+.main__about {
     display: flex;
     flex-direction: column;
 }
 
 /*слайдер со списком ссылок внутри, уезжающий за экран*/
-.main__slider-list{
+.main__list{
     display: flex;
     color: #7E7E82;
     font-size: 16px;
@@ -78,16 +81,14 @@ a:visited {
     margin: 0 0 24px 16px;
     padding: 0;
 }
-.main__slider-list li {
-    padding: 12px 2px;
-}
-.slider__link {
-    padding: 8px 10px 8px 16px;
+.main__link {
+    display: block;
+    padding: 8px 10px;
     border: 2px solid #F8F8F8;
     border-radius: 6px;
 }
 
-.slider__link:hover, .slider__link:active, .slider__link:focus{
+.main__link:hover, .main__link:active, .main__link:focus{
     border: 2px solid #B8FFEC;
     border-radius: 6px;
     background-color: #FFFFFF;
@@ -133,7 +134,7 @@ a:visited {
 }
 
 /*стили для первого абзаца*/
-.main__text {
+.about__text {
     font-family: "TT Lakes", "Tahoma", sans-serif;
     font-size: 14px;
     line-height: 18px;
@@ -143,13 +144,6 @@ a:visited {
     color: #1B1C21;
 }
 
-/*обёртка для кнопки ЧИТАТЬ ДАЛЕЕ*/
-.main__text--read_more_container{
-    display: flex;
-    align-items:center;
-    margin-left: 16px;
-    margin-bottom: 10px;
-}
 
 /*настройка элементов в хэдере, скрываем лишнее на мобайл фёрст версии*/
 
@@ -189,6 +183,15 @@ button {
 .actions-container:nth-child(-n+3) {
     display: none;
 }
+.about__show-more-btn {
+    background-color: #F8F8F8;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    margin-top: 0;
+    margin-left: 16px;
+    margin-bottom: 16px;
+}
 
 @media screen and (min-device-width: 550px) and (max-device-width: 650px) {
 
@@ -212,21 +215,19 @@ button {
         margin-left: 42px;
     }
 
-    .main__text_img-container{
+    .main__about{
         flex-direction: row;
         margin-right: 24px;
     }
-    .main__text-expand_btn {
-        font-size: 16px;
-    }
+
     .main__img {
         border-radius: 6px;
     }
 
-    .main__slider-list{
+    .main__list{
         margin: 0 0 24px 24px;
     }
-    .main__text {
+    .about__text {
         padding: 0 24px;
 
     }
@@ -245,6 +246,7 @@ button {
     .main__title {
         margin: 24px;
     }
+
 }
 
 @media screen and (min-device-width: 650px) and (max-device-width: 1119px) {
@@ -284,12 +286,12 @@ button {
 
 
 
-    .main__text_img-container {
+    .main__about {
         flex-direction: row;
         margin-right: 24px;
     }
 
-    .main__text_container, .main__img {
+    .about__article, .main__img {
         flex-basis: 50%;
         line-height: 20px;
     }
@@ -309,15 +311,19 @@ button {
         border-radius: 6px;
     }
 
-    .main__slider-list{
+    .main__list{
         margin: 0 0 24px 24px;
     }
-    .main__text, .main__text--hide1 {
+    .about__text, .main__text--hide1 {
         padding: 0 24px;
     }
 
     .main__title {
         margin: 24px;
+    }
+    .about__article, .main__img {
+        flex-basis: 50%;
+        line-height: 20px;
     }
 }
 
@@ -348,37 +354,22 @@ button {
         height: 40px;
     }
 
-    .main__text_img-container {
+    .main__about {
         flex-direction: row;
         margin-right: 24px;
     }
 
-    .main__text_container, .main__img {
+    .about__article, .main__img {
         flex-basis: 50%;
         line-height: 20px;
-    }
-
-    .main__text--hide2 {
-        display: block;
-        font-family: "TT Lakes", "Tahoma", sans-serif;
-        font-size: 14px;
-        line-height: 20px;
-        padding: 0 16px;
-        margin: 0;
-        margin-bottom: 16px;
-        color: #1B1C21;
     }
 
     .main__img {
         border-radius: 6px;
     }
 
-    .main__slider-list {
+    .main__list {
         margin: 0 0 24px 24px;
-    }
-
-    .main__text, .main__text--hide2 {
-        padding: 0 24px;
     }
 
     .main__title::before {
@@ -394,13 +385,27 @@ button {
     .main__title-wrapper {
         display: flex;
         position: relative;
-
     }
 
     .actions-repair::before {
         display: none;
     }
     .main__title {
-        margin: 42px 0 0 32px;
+        margin: 42px 0 8px 32px;
     }
+    .about__text, .about__text--full{
+        padding: 0 24px;
+    }
+
+    .main__text--hide1,
+    .main__text--hide2 {
+        display: inline;
+        font-family: "TT Lakes", "Tahoma", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0;
+        margin-bottom: 16px;
+        color: #1B1C21;
+    }
+
 }
