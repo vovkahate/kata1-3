@@ -79,9 +79,14 @@ a:visited {
     font-size: 16px;
     list-style-type: none;
     white-space: nowrap;
-    overflow-y: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none; /* Firefox 64 */
     margin: 0 0 24px 16px;
     padding: 0;
+}
+.main__list::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
 }
 .main__link {
     display: block;
