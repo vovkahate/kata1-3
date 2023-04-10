@@ -275,10 +275,10 @@ button {
     }
     .about__article{
         line-height: 20px;
-        flex-basis: 50%;
+        flex-basis: 60%;
     }
     .about__img-conteiner {
-        flex-basis: 50%;
+        flex-basis: 40%;
     }
 }
 
@@ -346,6 +346,13 @@ button {
     }
     .about__article p {
         text-align: left;
+    }
+    .about__article{
+        line-height: 20px;
+        flex-basis: 60%;
+    }
+    .about__img-conteiner {
+        flex-basis: 40%;
     }
 }
 
