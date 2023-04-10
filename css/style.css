@@ -29,8 +29,7 @@ button {
     font-family: "TT Lakes" , "Tahoma", sans-serif;
     background-color: #F8F8F8;
     margin: 0 auto;
-    min-width: 320px;
-    max-width: 1120px;
+
 }
 
 /*выравнивалка для текста в артикл*/
@@ -64,14 +63,16 @@ a:visited {
 
 /*обёртка для всего содержимого которое ниже хэдера*/
 .main__wrapper {
-    min-width: 320px;
     padding-bottom: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /*обёртка для блока с текстом и картинкой*/
 .main__about {
     display: flex;
     flex-direction: column;
+
 }
 
 /*слайдер со списком ссылок внутри, уезжающий за экран*/
@@ -205,7 +206,7 @@ button {
 .main__img--max {
     display: none;
 }
-@media screen and (min-device-width: 550px) and (max-device-width: 650px) {
+@media (min-width: 550px){
 
     /*делаем красиво в хэдере при растягивании экрана и задаём отступы*/
    .header__burger {
@@ -261,7 +262,7 @@ button {
 
 }
 
-@media screen and (min-device-width: 650px) and (max-device-width: 1119px) {
+@media  (min-width: 1119px) {
 
     .header__burger {
         margin-left: 24px;
@@ -335,7 +336,7 @@ button {
     }
 }
 
-@media screen and (min-device-width: 1120px) {
+@media (min-width: 1120px) {
 
     .header {
         display: none;
@@ -369,8 +370,6 @@ button {
 
     .about__article, .main__img {
         flex-basis: 50%;
-
-
         line-height: 20px;
 
     }
@@ -453,7 +452,8 @@ button {
         line-height: 20px;
     }
 .main__img--max {
-    display: block;
+    display: flex;
+    flex-shrink: 0.5;
 }
 
     .main__img {
@@ -461,5 +461,7 @@ button {
         max-width: 100%;
         height: auto;
     }
-
+    .about__article {
+        margin-right: auto;
+    }
 }
