@@ -13,9 +13,11 @@
     font-style: normal;
 }
 
+
 body {
     font-family: "TT Lakes", "Tahoma", sans-serif;
     background-color: #F8F8F8;
+
 }
 button {
     cursor: pointer;
@@ -328,10 +330,6 @@ button {
     .main__title {
         margin: 24px;
     }
-    .about__article, .main__img {
-        flex-basis: 50%;
-        line-height: 20px;
-    }
 }
 
 @media screen and (min-device-width: 1120px) {
@@ -368,8 +366,16 @@ button {
 
     .about__article, .main__img {
         flex-basis: 50%;
+
+
         line-height: 20px;
+
     }
+    .main__img {
+        max-width: 100%;
+        height: auto;
+    }
+
 
     .main__img {
         border-radius: 6px;
@@ -443,5 +449,6 @@ button {
         text-align: left;
         line-height: 20px;
     }
+
 
 }
