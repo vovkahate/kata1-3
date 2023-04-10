@@ -202,6 +202,9 @@ button {
     margin-bottom: 16px;
 }
 
+.main__img--max {
+    display: none;
+}
 @media screen and (min-device-width: 550px) and (max-device-width: 650px) {
 
     /*делаем красиво в хэдере при растягивании экрана и задаём отступы*/
@@ -449,6 +452,14 @@ button {
         text-align: left;
         line-height: 20px;
     }
+.main__img--max {
+    display: block;
+}
 
+    .main__img {
+        display: none;
+        max-width: 100%;
+        height: auto;
+    }
 
 }
