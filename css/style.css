@@ -206,7 +206,7 @@ button {
 .about__img-conteiner {
     text-align: center;
 }
-@media (min-width: 600px){
+@media (min-width: 550px){
 
     /*делаем красиво в хэдере при растягивании экрана и задаём отступы*/
    .header__burger {
