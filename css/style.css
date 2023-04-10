@@ -17,24 +17,26 @@
 body {
     font-family: "TT Lakes", "Tahoma", sans-serif;
     background-color: #F8F8F8;
-
 }
+
 button {
     cursor: pointer;
     font-family: "TT Lakes", "Tahoma", sans-serif;
     font-size: 16px;
 }
+
 /*обёртка для всего сайта*/
 .wrapper {
     font-family: "TT Lakes" , "Tahoma", sans-serif;
     background-color: #F8F8F8;
     margin: 0 auto;
-
+    max-width: 1120px;
+    min-width: 320px;
 }
 
 /*выравнивалка для текста в артикл*/
 .about__article p {
-    text-align: justify;
+    text-align: left;
 }
 
 /*отключаем стили ссылок*/
@@ -57,14 +59,12 @@ a:visited {
     justify-content: flex-start;
     align-items: center;
     border-bottom: 1px solid #D9FFF5;
-    min-width: 320px;
     box-sizing: border-box;
 }
 
 /*обёртка для всего содержимого которое ниже хэдера*/
 .main__wrapper {
     padding-bottom: 16px;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -72,7 +72,6 @@ a:visited {
 .main__about {
     display: flex;
     flex-direction: column;
-
 }
 
 /*слайдер со списком ссылок внутри, уезжающий за экран*/
@@ -137,11 +136,6 @@ a:visited {
     position: absolute;
     left: -1px;
 }
-/*делаем картинку резиновой чтобы во флексе тянулась*/
-.main__img {
-    max-width: 100%;
-    height: auto;
-}
 
 /*стили для первого абзаца*/
 .about__text {
@@ -167,7 +161,6 @@ button {
     padding: 0;
     border: none;
     background-color: #FFFFFF;
-
 }
 
 .header__burger,
@@ -206,7 +199,7 @@ button {
 .main__img--max {
     display: none;
 }
-@media (min-width: 550px){
+@media (min-width: 600px){
 
     /*делаем красиво в хэдере при растягивании экрана и задаём отступы*/
    .header__burger {
@@ -260,9 +253,31 @@ button {
         margin: 24px;
     }
 
+    .main__text--hide1 {
+        display: inline;;
+        font-family: "TT Lakes", "Tahoma", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        /*padding: 0 16px;*/
+        margin: 0;
+        margin-bottom: 16px;
+        color: #1B1C21;
+    }
+    .about__text--full{
+        padding: 0 24px;
+    }
+    .about__article{
+        flex-basis: 55%;
+        line-height: 20px;
+    }
+    .main__img {
+        width: 45%;
+
+    }
+
 }
 
-@media  (min-width: 1119px) {
+@media  (min-width: 800px) {
 
     .header__burger {
         margin-left: 24px;
@@ -297,27 +312,17 @@ button {
     }
 
 
-
-
     .main__about {
         flex-direction: row;
         margin-right: 24px;
     }
 
-    .about__article, .main__img {
-        flex-basis: 50%;
+    .about__article{
+        flex-basis: 55%;
         line-height: 20px;
     }
-
-    .main__text--hide1 {
-        display: block;
-        font-family: "TT Lakes", "Tahoma", sans-serif;
-        font-size: 14px;
-        line-height: 20px;
-        padding: 0 16px;
-        margin: 0;
-        margin-bottom: 16px;
-        color: #1B1C21;
+    .main__img {
+        flex-basis: 45%;
     }
 
     .main__img {
@@ -327,14 +332,18 @@ button {
     .main__list{
         margin: 0 0 24px 24px;
     }
-    .about__text, .main__text--hide1 {
+    .about__text, .about__text--full{
         padding: 0 24px;
     }
 
     .main__title {
         margin: 24px;
     }
+    .about__article p {
+        text-align: left;
+    }
 }
+
 
 @media (min-width: 1120px) {
 
@@ -368,20 +377,12 @@ button {
         margin-right: 24px;
     }
 
-    .about__article, .main__img {
+    .about__article {
         flex-basis: 50%;
         line-height: 20px;
 
     }
-    .main__img {
-        max-width: 100%;
-        height: auto;
-    }
 
-
-    .main__img {
-        border-radius: 6px;
-    }
 
     .main__list {
         margin: 0 0 0 24px;
@@ -451,15 +452,16 @@ button {
         text-align: left;
         line-height: 20px;
     }
-.main__img--max {
-    display: flex;
-    flex-shrink: 0.5;
+    .main__img--max {
+        display: block;
+        border-radius: 6px;
+
+    /*flex-shrink: 0.5;*/
 }
 
     .main__img {
         display: none;
-        max-width: 100%;
-        height: auto;
+
     }
     .about__article {
         margin-right: auto;
