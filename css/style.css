@@ -199,6 +199,13 @@ button {
 .main__img--max {
     display: none;
 }
+.main__img {
+    max-width: 100%;
+}
+
+.about__img-conteiner {
+    text-align: center;
+}
 @media (min-width: 600px){
 
     /*делаем красиво в хэдере при растягивании экрана и задаём отступы*/
@@ -267,14 +274,12 @@ button {
         padding: 0 24px;
     }
     .about__article{
-        min-width: 50%;
         line-height: 20px;
+        flex-basis: 50%;
     }
-    .main__img {
-        width: 320px;
-
+    .about__img-conteiner {
+        flex-basis: 50%;
     }
-
 }
 
 @media  (min-width: 800px) {
@@ -356,6 +361,7 @@ button {
         list-style-type: none;
         margin-top: 42px;
         margin-left: auto;
+        margin-right: 5px;
     }
     .main__actions li{
         padding-left: 32px;
