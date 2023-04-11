@@ -30,7 +30,7 @@ button {
     font-family: "TT Lakes" , "Tahoma", sans-serif;
     background-color: #F8F8F8;
     margin: 0 auto;
-    max-width: 1120px;
+
     min-width: 320px;
 }
 
@@ -206,6 +206,9 @@ button {
 .about__img-conteiner {
     text-align: center;
 }
+.list__item-bonus {
+    display: none;
+}
 @media (min-width: 550px){
 
     /*делаем красиво в хэдере при растягивании экрана и задаём отступы*/
@@ -265,7 +268,6 @@ button {
         font-family: "TT Lakes", "Tahoma", sans-serif;
         font-size: 14px;
         line-height: 20px;
-        /*padding: 0 16px;*/
         margin: 0;
         margin-bottom: 16px;
         color: #1B1C21;
@@ -368,7 +370,7 @@ button {
         list-style-type: none;
         margin-top: 42px;
         margin-left: auto;
-        margin-right: 5px;
+
     }
     .main__actions li{
         padding-left: 32px;
@@ -396,7 +398,6 @@ button {
 
     }
 
-
     .main__list {
         margin: 0 0 0 24px;
     }
@@ -414,6 +415,7 @@ button {
     .main__title-wrapper {
         display: flex;
         position: relative;
+        margin-right: 32px;
     }
 
     .actions-repair::before {
@@ -440,11 +442,11 @@ button {
     }
     .main__list{
         display: flex;
-        max-width: 1120px;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
     .list__item {
-        margin-right: 10px;
+        margin-right: 20px;
         margin-bottom: 14px;
     }
     .list__item:nth-child(1) {
@@ -478,5 +480,28 @@ button {
     }
     .about__article {
         margin-right: auto;
+        margin-left: 4px;
+    }
+    .main__about {
+        max-width: 1120px;
+    }
+    .main__list {
+        flex-wrap: nowrap;
+
+    }
+    .list__item-bonus {
+        display: block;
+        margin-left: 24px;
+        margin-bottom: 20px;
+    }
+    .bonus-button {
+        font-family: "TT Lakes", "Tahoma", sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        color: #7E7E82;
+        background-color: #F8F8F8;
+    }
+    .list__item:last-child {
+        display: none;
     }
 }
