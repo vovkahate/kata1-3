@@ -54,12 +54,12 @@ a:visited {
     margin: 0;
     margin-top: 50px;
     padding: 0;
-
     list-style: none;
     font-family: "TT Lakes", "Tahoma", sans-serif;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
+    position: relative;
 }
 
 .bottom-info__actions-list {
@@ -102,7 +102,7 @@ button {
     color: #7E7E82;
 }
 
-.list__item:first-child ::before {
+.list__item:first-child::before {
     content: "";
     width: 4px;
     height: 40px;
@@ -110,7 +110,8 @@ button {
     border-radius: 5px;
     position: absolute;
     left: -1px;
-    top: 115px;
+    top: -8px;
+
 }
 .bottom-info {
     margin-top: auto;
