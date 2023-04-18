@@ -546,6 +546,7 @@ button {
     margin: 0;
     padding: 0;
     width: 320px;
+    min-width: 320px;
     height: 100vh;
 
     box-sizing: border-box;
@@ -648,30 +649,30 @@ button {
     letter-spacing: -0.2px;
 }
 
-.bottom-info__phone{
-    font-family: "TT Lakes Bold", "Tahoma", sans-serif;
-    font-size: 24px;
-    line-height: 32px;
-    letter-spacing: -0.6px;
-    font-weight: bold;
+    .bottom-info__phone{
+        font-family: "TT Lakes Bold", "Tahoma", sans-serif;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+        font-weight: bold;
 }
-input {
-    display: none;
+    input {
+        display: none;
 }
-.language label:nth-of-type(1) {
-    color:grey;
-}
-
-.language label:hover:not(:nth-of-type(1)) {
-    transform: scale(1.1);
-    color: #41F6D7;
-    cursor: pointer;
+    .language label:nth-of-type(1) {
+        color:grey;
 }
 
-.top_menu button:hover {
-    transform: scale(1.1);
-    transition: all;
-    transition-duration: 1s;
+    .language label:hover:not(:nth-of-type(1)) {
+        transform: scale(1.1);
+        color: #41F6D7;
+        cursor: pointer;
+}
+
+    .top_menu button:hover {
+        transform: scale(1.1);
+        transition: all;
+        transition-duration: 1s;
 }
     .wrapper {
         flex-direction: row;
