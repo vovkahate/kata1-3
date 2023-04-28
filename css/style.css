@@ -279,7 +279,6 @@ button {
     --swiper-pagination-bullet-opacity: 1;
     --swiper-pagination-bullet-horizontal-gap: 4px;
     --swiper-pagination-bullet-vertical-gap: 6px;
-
 }
 
 .samsung {
@@ -337,11 +336,11 @@ button {
 .hide  {
     display: none;
 }
-.hidden { display:none;}
-
-.show {
-    display: none;
+.hidden {
+    display:none;
 }
+
+
 
 
 @media (min-width: 550px) {
@@ -439,6 +438,11 @@ button {
 
 
 @media (min-width: 768px) {
+    button {
+        background-color: transparent;
+        border: none;
+        transition: 0.5s ease;
+    }
 
     .exp, .collapse {
         display: block;
@@ -606,7 +610,6 @@ button {
     .main__slider-title {
         padding: 16px 32px;
         margin-bottom: 0;
-
     }
 
     .header {
@@ -643,7 +646,6 @@ button {
     .about__article {
         flex-basis: 50%;
         line-height: 20px;
-
     }
 
     .main__list {
@@ -788,7 +790,6 @@ button {
 .burger-menu__header {
     display: flex;
     height: 80px;
-
 }
 
 .burger-menu__list {
@@ -811,15 +812,13 @@ button {
     margin: 0;
     padding: 0;
 }
+
 button {
     background-color: transparent;
     border: none;
     transition: 1s ease;
 }
 
-.burger-menu__burger-btn{
-
-}
 .burger-menu__search-btn {
 
     margin-left: auto;
